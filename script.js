@@ -7,14 +7,13 @@ const registerLink = document.querySelector('.register-link');
 // Seleciona o elemento com a classe "login-link" no documento HTML
 const loginLink = document.querySelector('.login-link');
 
-// Adiciona um evento de clique ao elemento "registerLink"
-registerLink.onclick = () => {
-  // Adiciona a classe "active" ao elemento "wrapper"
+// Evita o salto do link "#" e alterna o estado da interface.
+registerLink.addEventListener('click', (event) => {
+  event.preventDefault();
   wrapper.classList.add('active');
-}
+});
 
-// Adiciona um evento de clique ao elemento "loginLink"
-loginLink.onclick = () => {
-  // Remove a classe "active" do elemento "wrapper"
+loginLink.addEventListener('click', (event) => {
+  event.preventDefault();
   wrapper.classList.remove('active');
-}
+});
